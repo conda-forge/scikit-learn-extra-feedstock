@@ -11,8 +11,8 @@ source:
 
 build:
   number: 0
-  skip: True  # [py<35]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  skip: true  # [py<35]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -47,13 +47,13 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'scikit-learn contrib estimators'
+  summary: scikit-learn contrib estimators
 
   description: |
-     scikit-learn-extra is a Python module for machine learning that extends
-     scikit-learn. It includes algorithms that are useful but do not satisfy
-     the scikit-learn inclusion criteria, for instance due to their novelty or
-     lower citation number.
+    scikit-learn-extra is a Python module for machine learning that extends
+    scikit-learn. It includes algorithms that are useful but do not satisfy
+    the scikit-learn inclusion criteria, for instance due to their novelty or
+    lower citation number.
   doc_url: https://scikit-learn-extra.readthedocs.io/
   dev_url: https://github.com/scikit-learn-contrib/scikit-learn-extra
 
