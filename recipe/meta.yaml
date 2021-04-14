@@ -1,5 +1,5 @@
 {% set name = "scikit-learn-extra" %}
-{% set version = "0.1.0b2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a8b244fd999209cfeac946fc61f133616a4b4e6997923e95a63127b79c8d52c4
+  sha256: 3b1bb5fedde47920eb4b3fa0a0c18f80cc7359d9d0496720178788c6153b8019
 
 build:
   number: 0
@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler("cxx") }}
   host:
     - python
     - pip
@@ -27,7 +28,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - scipy
     - joblib
-    - scikit-learn >=0.21.1
+    - scikit-learn >=0.23.0
 
 test:
   requires:
