@@ -11,7 +11,6 @@ source:
 
 build:
   number: 1
-  skip: true  # [py<35]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -40,7 +39,7 @@ test:
     - set OMP_NUM_THREADS=1               # [win]
     - export OPENBLAS_NUM_THREADS=1       # [not win]
     - export OMP_NUM_THREADS=1            # [not win]
-    - pytest --verbose --pyargs sklearn_extra
+    - pytest --verbose --pyargs sklearn_extra -k 'not test_all_estimators'
 
 about:
   home: https://github.com/scikit-learn-contrib/scikit-learn-extra
