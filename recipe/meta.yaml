@@ -39,7 +39,7 @@ test:
     - set OMP_NUM_THREADS=1               # [win]
     - export OPENBLAS_NUM_THREADS=1       # [not win]
     - export OMP_NUM_THREADS=1            # [not win]
-    - pytest --verbose --pyargs sklearn_extra -k 'not test_all_estimators'
+    - pytest --verbose --pyargs sklearn_extra -k "not test_all_estimators"
 
 about:
   home: https://github.com/scikit-learn-contrib/scikit-learn-extra
