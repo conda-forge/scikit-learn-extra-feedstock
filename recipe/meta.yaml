@@ -10,8 +10,7 @@ source:
   sha256: 3b1bb5fedde47920eb4b3fa0a0c18f80cc7359d9d0496720178788c6153b8019
 
 build:
-  number: 0
-  skip: true  # [py<35]
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -40,7 +39,7 @@ test:
     - set OMP_NUM_THREADS=1               # [win]
     - export OPENBLAS_NUM_THREADS=1       # [not win]
     - export OMP_NUM_THREADS=1            # [not win]
-    - pytest --verbose --pyargs sklearn_extra
+    - pytest --verbose --pyargs sklearn_extra -k "not test_all_estimators"
 
 about:
   home: https://github.com/scikit-learn-contrib/scikit-learn-extra
