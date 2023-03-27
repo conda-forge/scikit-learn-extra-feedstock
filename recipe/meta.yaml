@@ -1,5 +1,5 @@
 {% set name = "scikit-learn-extra" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3b1bb5fedde47920eb4b3fa0a0c18f80cc7359d9d0496720178788c6153b8019
+  sha256: 7912d43384470d77609e53819d0291967f21010e5c3a3847f9026fc02f9c7893
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
