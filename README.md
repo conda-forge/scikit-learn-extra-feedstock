@@ -250,4 +250,5 @@ Feedstock Maintainers
 =====================
 
 * [@rth](https://github.com/rth/)
+* [@stephenpardy](https://github.com/stephenpardy)
 
